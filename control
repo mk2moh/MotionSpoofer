@@ -1,0 +1,9 @@
+Package: com.yourname.motionspoofer
+Name: MotionSpoofer
+Version: 1.1.0
+Architecture: iphoneos-arm64
+Description: Scale accelerometer, gyro, magnetometer, device motion, pedometer and barometer values, with optional per-axis control.
+Maintainer: you
+Author: you
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
