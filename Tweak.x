@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreMotion/CoreMotion.h>
 
-#define DOMAIN @"com.yourname.motionspoofer"
+#define PREF_DOMAIN @"com.yourname.motionspoofer"
 #define NOTIFY "com.yourname.motionspoofer/prefsChanged"
 
 enum { S_ACCEL, S_GYRO, S_MAG, S_USERACCEL, S_GRAVITY, S_ROTRATE, S_MAGCAL, S_ATT, S_COUNT };
@@ -19,7 +19,7 @@ static double readD(NSUserDefaults *d, NSString *key, double def) {
 }
 
 static void loadPrefs(void) {
-    NSUserDefaults *d = [[NSUserDefaults alloc] initWithSuiteName:DOMAIN];
+    NSUserDefaults *d = [[NSUserDefaults alloc] initWithSuiteName:PREF_DOMAIN];
     NSArray *keys = @[@"accel", @"gyro", @"mag", @"userAccel", @"gravity", @"rotRate", @"magCal", @"attitude"];
     NSArray *ax = @[@"X", @"Y", @"Z"];
     gEnabled = [d objectForKey:@"enabled"] ? [d boolForKey:@"enabled"] : YES;
